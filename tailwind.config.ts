@@ -16,14 +16,14 @@ export default {
         lightPurple: "#EFEBFF",
         darkGray: "#333333",
         gray: "#737373",
-        border: "D9D9D9",
+        borderGray: "#D9D9D9",
         lightGray: "#FAFAFA",
       },
       fontSize: {
         large: "32px",
         medium: "16px",
         small:"12px"
-      }
+      },
     },
   },
   plugins: [],
