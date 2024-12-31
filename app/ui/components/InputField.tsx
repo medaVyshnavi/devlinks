@@ -6,12 +6,11 @@ type InputProps = {
   customStyles?: string ;
   id: string;
   name: string;
-  useIcon: boolean;
   icon?: string;
   alt?: string;
   placeholder: string
-  isError?: boolean;
   errorMessage?: string;
+  type:string
 };
 
 const InputField = ({
@@ -20,32 +19,31 @@ const InputField = ({
   customStyles,
   id,
   name,
-  useIcon,
   icon = "",
   alt = "",
   placeholder = "",
-  isError,
   errorMessage,
+  type
 }: InputProps) => {
-  const baseStyles = `w-full font-normal text-medium text-darkGray rounded-lg ${useIcon && 'pl-10'} px-4 py-3 border border-borderGray`;
+  const baseStyles = `w-full font-normal text-medium text-darkGray rounded-lg ${icon && 'pl-10'} px-4 py-3 border border-borderGray mb-5 mt-1`;
   const activeStyles = `focus:border focus:border-primary focus:outline focus:outline-transparent`;
   const errorStyles = `border border-red`;
 
   return (
       <div className="relative">
-        {useIcon && <Image src={icon} alt={alt} width={16} height={16} className="absolute left-[2%] top-[34%]"/>}
+        {icon && <Image src={icon} alt={alt} width={16} height={16} className="absolute left-[5%] top-[28%]"/>}
         <input
-          type="text"
+          type={type}
           placeholder={placeholder}
           name={name}
           id={id}
           className={`${customStyles} ${baseStyles} ${activeStyles} ${
-            isError && errorStyles
+            errorMessage && errorStyles
           }`}
           value={value}
           onChange={handleOnChange}
         />
-        <span className="text-error text-small absolute right-[2%] top-[34%] pl-">{isError && errorMessage}</span>
+        <span className="text-error text-small absolute right-[2%] top-[34%] pl-">{errorMessage && errorMessage}</span>
       </div>
   );
 };
