@@ -2,7 +2,9 @@ import React from 'react'
 
 const LinkComponent = () => {
   return (
-    <div>LinkComponent</div>
+    <div className='bg-lightGray'>
+
+    </div>
   )
 }
 
