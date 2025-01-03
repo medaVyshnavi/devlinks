@@ -94,10 +94,3 @@ const placeholderData: PlaceholderData[] = [
 ];
 
 export default placeholderData;
-
-
-
-
-
-
-

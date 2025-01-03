@@ -23,7 +23,7 @@ const Login = () => {
   });
 
   return (
-    <div className="flex justify-center items-center flex-col m-auto h-screen bg-lightGray">
+    <div className="flex justify-center items-center flex-col m-auto h-screen">
       <Image src={Logo} alt="devlinks logo" width={182} height={40} />
       <div className=" bg-white rounded-lg pb-6 pt-12 px-12 mt-16">
         <div>
@@ -69,7 +69,7 @@ const Login = () => {
               label="Submit"
               variant="primary"
               handleClick={() => console.log("form submit")}
-              customStyles="w-full mt-3"
+              customStyles="w-full mt-3 py-3"
             />
           </form>
         </div>

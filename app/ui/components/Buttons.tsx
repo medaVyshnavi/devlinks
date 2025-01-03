@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 type ButtonProps = {
   label: string;
@@ -6,6 +7,7 @@ type ButtonProps = {
   handleClick: () => void;
   customStyles?: string;
   type: 'button' | 'submit';
+  icon?:string
 }
 
 const Button = ({
@@ -14,9 +16,10 @@ const Button = ({
   variant,
   handleClick,
   customStyles,
-  type = "button"
+  type = "button",
+  icon = ""
 } : ButtonProps) => {
-  const baseStyles = `font-bold text-medium rounded-lg px-7 py-3 cursor-pointer`;
+  const baseStyles = `relative font-bold text-medium rounded-lg px-7 cursor-pointer`;
   const variantStyles =
     variant === "secondary"
       ? `border border-primary text-primary ${
@@ -33,6 +36,7 @@ const Button = ({
         disabled={disabled}
         onClick={handleClick}
       >
+        {icon && <Image src={icon} alt="icon" width={20} height={20}/>}
         {label}
       </button>
     </>

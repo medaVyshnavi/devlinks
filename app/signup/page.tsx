@@ -23,7 +23,7 @@ const SignUp = () => {
   });
 
   return (
-    <div className="flex justify-center items-center flex-col m-auto h-screen bg-lightGray">
+    <div className="flex justify-center items-center flex-col m-auto h-screen">
       <Image src={Logo} alt="devlinks logo" width={182} height={40} />
       <div className=" bg-white rounded-lg pb-4 pt-12 px-12 mt-12">
         <div>
@@ -94,7 +94,7 @@ const SignUp = () => {
               label="Create new account"
               variant="primary"
               handleClick={() => console.log("account created")}
-              customStyles="w-full mt-3"
+              customStyles="w-full mt-3 py-3"
             />
           </form>
         </div>
