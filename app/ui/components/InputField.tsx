@@ -25,7 +25,7 @@ const InputField = ({
   errorMessage,
   type
 }: InputProps) => {
-  const baseStyles = `w-full font-normal text-medium text-darkGray rounded-lg ${icon && 'pl-10'} px-4 py-3 border border-borderGray mb-5 mt-1`;
+  const baseStyles = `w-full font-normal text-medium text-darkGray rounded-lg ${icon && 'pl-12'} px-4 py-3 border border-borderGray mb-5 mt-1`;
   const activeStyles = `focus:border focus:border-primary focus:outline focus:outline-transparent`;
   const errorStyles = `border border-red`;
 

@@ -35,6 +35,7 @@ const Dropdown = () => {
           onClick={handleOpenToggle}
           className="w-full border border-borderGray rounded-lg py-2.5 px-12"
           value={selectedLink.name || ""}
+          readOnly
         />
         <Image
           src={DownArrow}

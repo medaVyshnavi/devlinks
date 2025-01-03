@@ -3,7 +3,8 @@ export type LinkListProps = {
   name: string;
   iconPath: string;
   bgColor: string;
-  value:string
+  value: string
+  url?:string
 };
 
 const LinkList: LinkListProps[] = [
@@ -104,7 +105,7 @@ const LinkList: LinkListProps[] = [
     name: "Stack Overflow",
     iconPath: "/images/icon-stack-overflow.svg",
     bgColor: "#EC7100",
-    value:"stackoverflow"
+    value: "stackoverflow",
   },
 ];
 
